@@ -191,11 +191,6 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			<plugin>
-                    <groupId>com.github.github</groupId>
-                    <artifactId>site-maven-plugin</artifactId>
-                    <version>0.10</version>
-                </plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -461,14 +456,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.5</version>
 		</dependency>
-                        <dependency>
- <groupId>org.eclipse.mylyn.github</groupId>
-    <artifactId>org.eclipse.egit.github.core</artifactId>
-    <version>3.1.0.201310021548-r</version>
-	<scope>system</scope>
-                        </dependency>
 
-  <!-- <scope>test</scope> -->
 		<!-- Testing dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -536,8 +524,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-
 
 	<profiles>
 		<profile>
