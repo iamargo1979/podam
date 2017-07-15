@@ -191,18 +191,6 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			<plugin>
-                    <groupId>com.github.github</groupId>
-                    <artifactId>site-maven-plugin</artifactId>
-                    <version>0.10</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.eclipse.mylyn.github</groupId>
-                            <artifactId>org.eclipse.egit.github.core</artifactId>
-                            <version>2.1.5</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -436,11 +424,6 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-		 <repository>
-+      <id>egit</id>
-+      <name>Eclipse egit</name>
-+      <url>https://repo.eclipse.org/content/repositories/egit-releases/</url>
-+    </repository>
 		<site>
 			<id>github-project-site</id>
 			<url>gitsite:git@github.com/devopsfolks/podam.git</url>
@@ -453,6 +436,14 @@
 			<artifactId>jcip-annotations</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.mylyn.github</groupId>
+			<artifactId>org.eclipse.egit.github.core</artifactId>
+			<version>3.1.0.201310021548-r</version>
+			<scope>system</scope>
+			 <systemPath>${basedir}/src/org.eclipse.egit-3.1.0.201310021548-r.jar</systemPath>
+		</dependency>
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -473,7 +464,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.5</version>
 		</dependency>
-  <!-- <scope>test</scope> -->
+
 		<!-- Testing dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -541,8 +532,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-
 
 	<profiles>
 		<profile>
