@@ -29,11 +29,16 @@ jobs:
           - v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-
-      - run: mvn dependency:go-offline
-    - run: mvn clean install
-    - run: mvn clean site:site
-
+		   - run:
+ 			name: mvn dependency:go-offline
+	          command: 'mvn dependency:go-offline'
+			   - run:
+ 			name: mvn clean install
+	          command: 'mvn clean install
+			   - run:
+ 			name:  mvn clean site:site
+	          command: 'mvn clean site:site'
+			  
       - save_cache:
           paths:
             - ~/.m2
