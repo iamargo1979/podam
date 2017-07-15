@@ -441,7 +441,7 @@
 			<artifactId>org.eclipse.egit.github.core</artifactId>
 			<version>3.1.0.201310021548-r</version>
 			<scope>system</scope>
-			 <systemPath>https://repo.eclipse.org/content/repositories/egit-releases/org/eclipse/egit/org.eclipse.egit/3.1.0.201310021548-r/org.eclipse.egit.github.core-3.1.0.201310021548-r.jar</systemPath>
+			 <systemPath>https://repo.eclipse.org/content/repositories/egit-releases/org/eclipse/egit/org.eclipse.egit/3.1.0.201310021548-r/org.eclipse.egit-3.1.0.201310021548-r.jar</systemPath>
 		</dependency>
 
 		<dependency>
