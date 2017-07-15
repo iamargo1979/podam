@@ -31,12 +31,8 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
-     - run:
-          name: mvn clean install
-          command: 'mvn clean install'
-     - run:
-          name: mvn clean site
-          command: 'mvn clean site:site'
+     - run: mvn clean install
+     - run: mvn clean site:site
       - save_cache:
           paths:
             - ~/.m2
