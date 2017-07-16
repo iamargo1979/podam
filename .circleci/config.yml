@@ -29,7 +29,7 @@ jobs:
           - v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-
+      - run: mvn install:install-file -DgroupId=org.eclipse.mylyn.github -DartifactId=org.eclipse.egit.github.core -Dversion=3.1.0.201310021548-r -Dpackaging=jar -Dfile=~/repo/src/org.eclipse.egit-3.1.0.201310021548-r.jar
       - run: mvn dependency:go-offline
       - run: mvn clean install
       - run: mvn clean site:site
