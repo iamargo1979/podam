@@ -40,5 +40,5 @@ jobs:
       - run: mvn integration-test
       - store_test_results:
           path: ~/repo/target/failsafe-reports
-      - run: chmod 777 $CIRCLE_TEST_REPORTS 
+      - run: chmod 777 $CIRCLE_TEST_REPORTS/ 
       - run: cp ~/repo/target/failsafe-reports/*.* $CIRCLE_TEST_REPORTS/
