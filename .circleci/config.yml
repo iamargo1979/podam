@@ -40,4 +40,4 @@ jobs:
       - run: mvn integration-test
       - store_test_results:
           path: ~/repo/target/failsafe-reports
-      - run: cp ~/target/failsafe-reports/*.xml $CIRCLE_TEST_REPORTS/
+      - run: cp ~/target/failsafe-reports/*.* $CIRCLE_TEST_REPORTS/
