@@ -40,4 +40,5 @@ jobs:
       - run: mvn integration-test
       - store_test_results:
           path: ~/repo/target/failsafe-reports
-      - run: sudo cp ~/repo/target/failsafe-reports/*.* $CIRCLE_TEST_REPORTS/
+      - run: sudo mkdir $CIRCLE_TEST_REPORTS/junit
+      - run: sudo cp ~/repo/target/failsafe-reports/*.* $CIRCLE_TEST_REPORTS/junit/
