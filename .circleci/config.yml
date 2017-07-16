@@ -40,5 +40,6 @@ jobs:
       - run: mvn integration-test
       - store_test_results:
           path: ~/repo/target/failsafe-reports
-      - run: sudo mkdir $CIRCLE_TEST_REPORTS/junit
+      - run: sudo mkdir $CIRCLE_TEST_REPORTS/junit/
       - run: sudo cp ~/repo/target/failsafe-reports/*.* $CIRCLE_TEST_REPORTS/junit/
+      - run: sudo  find . -type f -regex "./target/surefire-reports/.xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
